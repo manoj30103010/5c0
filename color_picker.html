@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <title>
+            Color_picker_using _javaScript
+        </title>
+        <script>
+            function helper(color){
+                //document.body.style.background=color;
+                document.body.style.background = color;
+            }
+        </script>
+        <style>
+            table.center{
+                margin-left: auto;
+                margin-right: auto;
+                border:2px solid black;
+                border-radius: 15px;
+                padding: 25px
+            }
+           
+            button.a{
+                background-color: rgb(37, 233, 12);
+                width: 25px;
+                height: 25px;
+            }
+            button.b{
+                background-color: antiquewhite;
+                width: 25px;
+                height: 25px;
+            }
+            button.c{
+                background-color:aqua;
+                width: 25px;
+                height: 25px;
+            }
+            button.d{
+                background-color:palevioletred;
+                width: 25px;
+                height: 25px;
+            }
+            button.e{
+                background-color:gold;
+                width: 25px;
+                height: 25px;
+            }
+            button.f{
+                background-color:teal;
+                width: 25px;
+                height: 25px;
+            }
+        </style>
+    </head>
+    <body >
+        <form method="post">
+           <!-- <input type="color">-->
+           <br><br><br><br>
+           <table class="center">  
+            <tr><th colspan="3"><h1>
+                The color picker
+            </h1></th></tr>
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                    <table>
+                        <tr colspan="3">
+                            <td><button type="button" class="a"  onclick="helper('green');" ></button></td>
+                           <td> <button  type="button" onclick="helper('rgb(37, 233, 12)');"class="b"></button>
+                           <td> <button type="button" onclick="helper('teal');"class="c"></button>
+                            <td><button type="button" onclick="helper('rgb(137, 233, 12)');"class="d" ></button>
+                           <td> <button type="button" onclick="helper('rgb(37, 33, 12)');"class="e"></button>
+                           <td> <button type="button" onclick="helper('rgb(37, 233, 122)');"class="f"></button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" onclick="helper('rgb(37, 23, 12)');"class="a"></button></td>
+                            <td><button type="button" onclick="helper('rgb(237, 233, 12)');"class="b"></button></td>
+                            <td><button type="button" onclick="helper('rgb(37, 233, 152)');"class="c"></button></td>
+                            <td><button type="button" onclick="helper('rgb(37, 0, 12)');"class="d"></button></td>
+                            <td><button type="button" onclick="helper('rgb(, 233, 12)');"class="e"></button></td>
+                            <td><button type="button" onclick="helper('rgb(37, 233, 132)');"class="f"></button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" onclick="helper('rgb(37, 85, 132)');"class="a"></button></td>
+                            <td><button type="button" onclick="helper('rgb(130, 233, 132)');"class="b"></button></td>
+                            <td><button type="button" onclick="helper('rgb(37, 233, 30)');" class="c"></button></td>
+                            <td><button type="button" onclick="helper('rgb(207, 233, 132)');"class="d"></button></td>
+                            <td><button type="button" onclick="helper('rgb(37, 203, 232)');"class="e"></button></td>
+                            <td><button type="button" onclick="helper('rgb(237, 243, 232)');"class="f"></button></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><button type="button" onclick="helper('rgb(37, 233, 132)');"class="a"></button></td>
+                            <td><button type="button" onclick="helper('rgb(37, 233, 132)');"class="b"></button></td>
+                            <td><button type="button" onclick="helper('rgb(37, 233, 132)');"class="c"></button></td>
+                            <td><button type="button" onclick="helper('rgb(137, 233, 232)');"class="d"></button></td>
+                            <td><button type="button" onclick="helper('rgb(137, 233, 232)');"class="e"></button></td>
+                            <td><button type="button" onclick="helper('rgb(137, 233, 232)');"class="f"></button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" onclick="helper('rgb(137, 233, 232)');"class="a"></button></td>
+                            <td><button type="button" onclick="helper('rgb(137, 233, 232)');"class="b"></button></td>
+                            <td><button type="button" onclick="helper('rgb(137, 233, 232)');"class="c"></button></td>
+                            <td><button type="button" onclick="helper('rgb(17, 233, 232)');"class="d"></button></td>
+                            <td><button type="button" onclick="helper('rgb(137, 233, 242)');"class="e"></button></td>
+                            <td><button type="button" onclick="helper('rgb(237, 233, 242)');"class="f"></button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" onclick="helper('rgb(237, 233, 242)');"class="a"></button></td>
+                            <td><button type="button" onclick="helper('rgb(237, 233, 242)');"class="b"></button></td>
+                            <td><button type="button" onclick="helper('rgb(217, 233, 232)');"class="c"></button></td>
+                            <td><button type="button" onclick="helper('rgb(127, 233, 232)');"class="d"></button></td>
+                            <td><button type="button" onclick="helper('rgb(172, 233, 232)');"class="e"></button></td>
+                            <td><button type="button" onclick="helper('green');"class="f"></button></td>
+                        </tr>
+                        
+                    </table>
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+           </table>
+
+
+           <table>
+            <tr>
+                <td id=""></td>
+                <td id=""></td>
+                <td id=""></td>
+                <td id=""></td>
+                
+            </tr>
+            <tr>
+                <td id=""></td>
+                <td id=""></td>
+                <td id=""></td>
+                <td id=""></td>
+                
+            </tr>
+            <tr>
+                <td id=""></td>
+                <td id=""></td>
+                <td id=""></td>
+                <td id=""></td>
+                
+            </tr>
+           </table>
+        </form>
+    </body>
+</html>

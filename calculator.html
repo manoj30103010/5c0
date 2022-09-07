@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <title>
+            calculator
+        </title>
+        <style>
+            table{
+                margin-left:auto;
+                margin-right: auto;
+                width: 250px;
+                height: 200px;
+                border-style: 0;
+            }
+            td,tr{
+                background-color: gray;
+                margin:0;
+                padding:0;
+            }
+            td{
+                width:25%;
+                margin:0;
+                padding:0;
+            }
+            button{
+              padding:0;
+              margin:0;
+              height: 100%;
+              width:100%;
+            }
+            div{
+                background-color: gray;
+                height: 20px;
+                width: 100%;
+                color:white;
+                text-align: right;
+            }
+        </style>
+        <script>
+            var input1=" ",input2=" ",result=" ",op="";
+           function clicker(symbol){
+            //console.log(symbol);
+            console.log(input1+" "+input2);
+            if(op.length===0){
+                input1+=symbol;
+              const dis=  document.getElementById("dis");
+              dis.innerHTML=input1;
+              //console.log(dis);
+            }
+              else{
+                input2+=symbol;
+              const dis=  document.getElementById("dis");
+              dis.innerHTML=input2;
+              //console.log(dis);
+            }
+              }
+            
+            function clear(){
+                const dis=  document.getElementById("dis");
+              dis.innerHTML="";
+              console.log(dis);
+            }
+            function opera(symbol){
+                op=symbol;
+                console.log(op);
+            }
+            function verify(){
+                const dis=  document.getElementById("dis");
+                if (input1.length != 0 && input2.length!=0 ){
+                    console.log("hai");
+                    if(op==="+"){
+                        //console.log("hai");
+                        input1=parseFloat(input1,10);
+                        input2=parseFloat(input2,10);
+                        result=input2+input1;
+                        dis.innerHTML=result;
+                    }
+                    else if(op==="-"){
+                        input1=parseFloat(input1,10);
+                        input2=parseFloat(input2,10);
+                        result=input1-input2;
+                        dis.innerHTML=result;
+                    }
+                    else if(op==="*"){
+                        input1=parseFloat(input1,10);
+                        input2=parseFloat(input2,10);
+                        result=input1*input2;
+                        dis.innerHTML=result;
+                    }
+                    else if(op==="%"){
+                        input1=parseFloat(input1,10);
+                        input2=parseFloat(input2,10);
+                        result=input1%input2;
+                        dis.innerHTML=result;
+                    }
+                  
+                }
+                input1="";
+                    input2="";
+                    op="";
+            }
+        </script>
+    </head>
+    <body>
+        <br><br><br><br>
+        <table>
+            <form>
+            <tr><td colspan="4"><div ><p id="dis"></p></div></td></tr>
+            <tr><td><button type="button" onclick="clicker('')">(</button></td>
+                <td> <button type="button" onclick="window.alert()" >CE</button> </td>
+                <td><button type="button" onclick="clicker('')">)</button> </td>
+                <td><button type="button" onclick="clear()">C</button> </td>
+            </tr>
+            <tr><td><button type="button" onclick="clicker('1')" >1</button></td>
+                <td><button type="button"  onclick="clicker('2')">2</button></td>
+                <td><button type="button"  onclick="clicker('3')">3</button></td>
+                <td><button type="button" onclick="opera('+')">+</button></td>
+            </tr>
+            <tr><td><button type="button" onclick="clicker('4')">4</button></td>
+                <td><button type="button" onclick="clicker('5')" >5</button></td>
+                <td><button type="button" onclick="clicker('6')">6</button></td>
+                <td><button type="button" onclick="opera('-')">-</button></td>
+            </tr>
+            <tr><td><button type="button" onclick="clicker('7')">7</button></td>
+                <td><button type="button" onclick="clicker('8')">8</button></td>
+                <td><button type="button" onclick="clicker('9')">9</button></td>
+                <td><button type="button" onclick="opera('*')">x</button></td>
+            </tr>
+            <tr><td><button type="button" onclick="clicker('.')">.</button></td>
+                <td><button type="button" onclick="clicker('0')">0</button></td>
+                <td><button type="button" onclick="verify()" >=</button></td>
+                <td><button type="button" onclick="opera('%')">%</button></td>
+            </tr>
+            </form>
+        </table>
+    </body>
+</html>
